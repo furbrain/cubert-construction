@@ -1,0 +1,47 @@
+G40	; disable tool radius compensation
+G49	; disable tool length compensation
+G80	; cancel modal motion
+G54	; select coordinate system 1
+G90	; disable incremental moves
+G21	; metric
+F300	; set feedrate
+S1000	; set spindle speed
+G61	; exact path mode
+M3	; start spindle
+G04 P3.0	; wait for 3.0 seconds
+G0 X-4.302737 Y4.950495 Z25.000000
+F100	; set feedrate
+G1 Z19.946667
+F300	; set feedrate
+G1 X-4.011232 Y4.554455
+  X-4.145798 Y4.158416
+  X-4.145798 Y-4.158416
+  X-4.011233 Y-4.554455
+  X-4.302736 Y-4.950495
+  X4.302737
+  X4.011232 Y-4.554455
+  X4.145798 Y-4.158416
+  X4.145798 Y4.158416
+  X4.011233 Y4.554455
+  X4.302736 Y4.950495
+  X-4.302737
+G0 Z25.000000
+  X-4.302737 Y-4.950495
+F100	; set feedrate
+G1 Z17.093333
+F300	; set feedrate
+G1 X-4.011232 Y-4.554455
+  X-4.145798 Y-4.158416
+  X-4.145798 Y4.158416
+  X-4.011233 Y4.554455
+  X-4.302736 Y4.950495
+  X4.302737
+  X4.011232 Y4.554455
+  X4.145798 Y4.158416
+  X4.145798 Y-4.158416
+  X4.011233 Y-4.554455
+  X4.302736 Y-4.950495
+  X-4.302737
+M5	; stop spindle
+G0 Z25.000000
+M2	; end program
